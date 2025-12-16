@@ -63,7 +63,7 @@ public class SmartParkingSystem extends JFrame {
         }
     }
 
-    // C. Modern Button (With Hover Animation & Flexible Size)
+
     class ModernButton extends JButton {
         private boolean isHovered = false;
 
@@ -340,7 +340,7 @@ public class SmartParkingSystem extends JFrame {
         saveData();
     }
 
-    // --- 8. CONSTRUCTOR (Main Entry Point) ---
+
     public SmartParkingSystem() {
         loadData(); // 1. Data Load
 
@@ -368,7 +368,6 @@ public class SmartParkingSystem extends JFrame {
 
         add(mainPanel);
 
-        // 5. Timer Start (Auto-Cancel Reservation Logic)
         Timer timer = new Timer(true);
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -482,7 +481,6 @@ public class SmartParkingSystem extends JFrame {
         return panel;
     }
 
-    // --- 10. SCREEN 2: SIGNUP PANEL ---
     private JPanel createSignupPanel() {
         GradientPanel panel = new GradientPanel();
         panel.setLayout(new GridBagLayout());
@@ -560,7 +558,7 @@ public class SmartParkingSystem extends JFrame {
 
 
 
-    // --- 11. SCREEN 3: ADMIN PANEL (Updated with Revenue Report) ---
+    // --- 11. SCREEN 3: ADMIN PANEL ---
     JPanel adminContentPanel;
     JLabel lblTotalDrivers, lblTotalAreas, lblGrandTotal;
 
@@ -717,11 +715,7 @@ public class SmartParkingSystem extends JFrame {
         adminContentPanel.repaint();
     }
 
-// PART 4 ENDS HERE - CONTINUE TO PART 5
-
-
-// PART 4 ENDS HERE - DO NOT CLOSE THE BRACKET '}'
-// PASTE THIS BELOW PART 4
+// PART 4
 
     // --- 12. SCREEN 4: DRIVER DASHBOARD (Updated Layout & Sidebar) ---
     private JPanel createDriverDashboard() {
@@ -799,7 +793,6 @@ public class SmartParkingSystem extends JFrame {
 
         mainDash.add(sidebar, BorderLayout.WEST);
 
-        // C. Area Grid (Updated for 5 Areas - Responsive Look)
         JPanel areaListPanel = new JPanel();
         // Grid: 3 Columns looks best for 5 items on a wide screen
         areaListPanel.setLayout(new GridLayout(0, 3, 20, 20));
@@ -922,11 +915,7 @@ public class SmartParkingSystem extends JFrame {
         }
     }
 
-// PART 5 ENDS HERE - CONTINUE TO PART 6
-
-
-// PART 5 ENDS HERE - DO NOT CLOSE THE BRACKET '}'
-// PASTE THIS BELOW PART 5
+// PART 5
 
     // --- 15. CORE LOGIC: BOOKING -> PARKING -> BILLING ---
     private void handleSlotClick(ParkingSlot slot, ParkingArea area, JButton btn, JFrame frame) {
@@ -1061,5 +1050,5 @@ public class SmartParkingSystem extends JFrame {
         });
     }
 
-} // <--- FINAL BRACKET (Code Ends Here)
+}
 
